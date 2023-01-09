@@ -1,0 +1,22 @@
+:host {
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 3rem;
+}
+
+app-carniceria,
+app-pescaderia,
+app-panaderia {
+  border: 0.1rem solid black;
+  width: 33%;
+  height: 150px;
+}

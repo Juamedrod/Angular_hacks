@@ -1,0 +1,58 @@
+<h1>ANGULAR CDK </h1>
+
+<!-- DomPortalOutlet -->
+<div id="portalOutletId"></div>
+
+<!-- Drag & Drop -->
+<h2>Drag & Drop</h2>
+
+<div class="example-container">
+  <h3>Carta</h3>
+
+  <div cdkDropList #cartaRef="cdkDropList" [cdkDropListData]="carta" [cdkDropListConnectedTo]="[comandaRef]"
+    class="example-list" (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let item of carta" cdkDrag>{{item}}</div>
+  </div>
+</div>
+
+<div class="example-container">
+  <h3>Comanda</h3>
+
+  <div cdkDropList #comandaRef="cdkDropList" [cdkDropListData]="comanda" [cdkDropListConnectedTo]="[cartaRef]"
+    class="example-list" (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let item of comanda" cdkDrag>{{item}}</div>
+  </div>
+</div>
+
+<!-- Drag & Drop -->
+<h2>Accordion</h2>
+
+<cdk-accordion class="example-accordion">
+  <cdk-accordion-item *ngFor="let item of comanda; let index = index;" #accordionItem="cdkAccordionItem"
+    class="example-accordion-item" role="button" tabindex="0" [attr.id]="'accordion-header-' + index"
+    [attr.aria-expanded]="accordionItem.expanded" [attr.aria-controls]="'accordion-body-' + index">
+    <div class="example-accordion-item-header" (click)="accordionItem.toggle()">
+      {{ item }}
+      <span class="example-accordion-item-description">
+        Click to {{ accordionItem.expanded ? 'close' : 'open' }}
+      </span>
+    </div>
+    <div class="example-accordion-item-body" role="region" [style.display]="accordionItem.expanded ? '' : 'none'"
+      [attr.id]="'accordion-body-' + index" [attr.aria-labelledby]="'accordion-header-' + index">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis
+      excepturi incidunt ipsum deleniti labore, tempore non nam doloribus blanditiis
+      veritatis illo autem iure aliquid ullam rem tenetur deserunt velit culpa?
+    </div>
+  </cdk-accordion-item>
+</cdk-accordion>
+
+<!--  Aquí se usa un componente que actua de envoltura (Wrapper) para que  -->
+<!-- cualquier contenido que se introduzca entre los tags (Proyección) -->
+<!--  se renderize en el DomPortalOutlet (El lugar de destino de lo que quiero mostrar en UI) -->
+<!-- Nivel de dificultad: 9/10 -->
+<app-portal-wrapper><app-footer></app-footer></app-portal-wrapper>
+
+
+<!-- Mismo efecto usando una directiva, con azucar sintactico (*) -->
+<!-- Nivel de dificultad: 10/10 -->
+<app-footer *appRenderInPortal></app-footer>

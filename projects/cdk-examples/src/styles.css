@@ -1,0 +1,2 @@
+/* Esta linea es muy importante ya que al estar usando solo el CDK sin angular material, no hay tema por defecto, y sin ella componentes que necesitan una mínima estructura visual como el Overlay, Dialog, Menu... no funcionarian correctaemtne o mostrarian comportamientos erráticos. */
+@import '@angular/cdk/overlay-prebuilt.css';

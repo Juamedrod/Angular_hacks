@@ -1,0 +1,9 @@
+h1 {
+  color: whitesmoke;
+  background-color: grey;
+  text-align: center;
+  width: 90vw;
+  height: 90vh;
+  margin: auto auto;
+  padding: 2rem;
+}

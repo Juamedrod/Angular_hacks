@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+button {
+  width: fit-content;
+  height: 2rem;
+  border: 0.1rem solid crimson;
+  border-radius: 0.4rem;
+  color: crimson;
+  background-color: whitesmoke;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin: 0.4rem 0;
+}
+
+.btn2 {
+  width: fit-content;
+  height: 2rem;
+  border: 0.1rem solid blue;
+  border-radius: 0.4rem;
+  color: blue;
+  background-color: whitesmoke;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin: 0.4rem 0;
+}
