@@ -3,7 +3,7 @@ import { Vendedor } from '../interfaces/vendedor.interface';
 
 @Injectable()
 export class VendedorService implements Vendedor {
-  nombre = 'Vendedor'
+  nombre = 'Vendedor Genérico'
 
   constructor() { }
 

@@ -8,6 +8,8 @@ import { PescaderiaComponent } from './components/pescaderia/pescaderia.componen
 import { CarniceriaComponent } from './components/carniceria/carniceria.component';
 import { PanaderiaComponent } from './components/panaderia/panaderia.component';
 import { VendedorService } from './services/vendedor.service';
+import { MayoristanolimpiopescadoService } from './services/mayoristanolimpiopescado.service';
+import { CarniceroService } from './services/carnicero.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,7 @@ import { VendedorService } from './services/vendedor.service';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [VendedorService],
+  providers: [{ provide: VendedorService, useClass: CarniceroService }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

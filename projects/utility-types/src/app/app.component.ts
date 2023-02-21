@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -101,3 +102,7 @@ type PersonFunction = ThisType<(this: Person, name: string) => void>;
 // equivalente a:
 // type PersonFunction = (this: Person, name: string) => void
 
+
+//No tengo que predefinir el tipo para tipar inicializaciones, o llamadas a funciones con tipos Genéricos.
+//Es algo muy común en el patron Repositorio de la POO
+const observable = new Observable<Omit<Person, 'age'>>();

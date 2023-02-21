@@ -1,0 +1,22 @@
+:host {
+  display: block;
+  padding: 1rem;
+  color: rgb(9, 172, 52);
+  background-color: rgb(75, 72, 69);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 98vh;
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+div {
+  margin-bottom: 3rem;
+}
+
+:host ::ng-deep p {
+  /* Aquí puedes definir estilos para el contenido proyectado */
+  margin: 2rem 0;
+}

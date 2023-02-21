@@ -6,7 +6,7 @@ import { VendedorService } from '../../services/vendedor.service';
   selector: 'app-panaderia',
   templateUrl: './panaderia.component.html',
   styleUrls: ['./panaderia.component.css'],
-  providers: [{ provide: VendedorService, useClass: PanaderoService }]
+  /*  providers: [{ provide: VendedorService, useClass: PanaderoService }] */
 })
 export class PanaderiaComponent {
   message: string = 'Sin compras';

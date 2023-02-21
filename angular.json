@@ -466,6 +466,279 @@
           }
         }
       }
+    },
+    "observables": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/observables",
+      "sourceRoot": "projects/observables/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/observables",
+            "index": "projects/observables/src/index.html",
+            "main": "projects/observables/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/observables/tsconfig.app.json",
+            "assets": [
+              "projects/observables/src/favicon.ico",
+              "projects/observables/src/assets"
+            ],
+            "styles": [
+              "projects/observables/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "observables:build:production"
+            },
+            "development": {
+              "browserTarget": "observables:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "observables:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/observables/tsconfig.spec.json",
+            "assets": [
+              "projects/observables/src/favicon.ico",
+              "projects/observables/src/assets"
+            ],
+            "styles": [
+              "projects/observables/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "QR_code": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/qr-code",
+      "sourceRoot": "projects/qr-code/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/qr-code",
+            "index": "projects/qr-code/src/index.html",
+            "main": "projects/qr-code/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/qr-code/tsconfig.app.json",
+            "assets": [
+              "projects/qr-code/src/favicon.ico",
+              "projects/qr-code/src/assets"
+            ],
+            "styles": [
+              "projects/qr-code/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "QR_code:build:production"
+            },
+            "development": {
+              "browserTarget": "QR_code:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "QR_code:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/qr-code/tsconfig.spec.json",
+            "assets": [
+              "projects/qr-code/src/favicon.ico",
+              "projects/qr-code/src/assets"
+            ],
+            "styles": [
+              "projects/qr-code/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "di-casa": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/di-casa",
+      "sourceRoot": "projects/di-casa/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/di-casa",
+            "index": "projects/di-casa/src/index.html",
+            "main": "projects/di-casa/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/di-casa/tsconfig.app.json",
+            "assets": [
+              "projects/di-casa/src/favicon.ico",
+              "projects/di-casa/src/assets"
+            ],
+            "styles": [
+              "projects/di-casa/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "di-casa:build:production"
+            },
+            "development": {
+              "browserTarget": "di-casa:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "di-casa:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/di-casa/tsconfig.spec.json",
+            "assets": [
+              "projects/di-casa/src/favicon.ico",
+              "projects/di-casa/src/assets"
+            ],
+            "styles": [
+              "projects/di-casa/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
     }
   }
 }
